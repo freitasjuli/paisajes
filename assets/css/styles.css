@@ -37,6 +37,7 @@ p{
     color: black;
     font-weight: bold;
     margin: 10px;
+    transition: background-color 1s ease;
 }
 .cuadro:hover{
     background-color: #DAD7CD;
@@ -55,7 +56,10 @@ p{
     text-align: center;
     justify-content: center;
     margin-bottom: 10px;
+    transition: background-color 1s linear;
+    animation: cssanimation 1412ms infinite ease;
 }
+
 .buton:hover{
     background-color: #DAD7CD;
 }
@@ -123,16 +127,17 @@ p{
     .footer{
         width: 100%;
         background-color: #3A5A40;
-        font-size: 20px;
-        text-align: center;
+        font-size: 15px;
         color: rgb(255, 255, 255);
         border-color: black;
         border: 1px;
         border-style: solid;
-        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
     }
-
-} 
+}
 @media(min-width: 577px) and (max-width: 996px){
     .todo{
         width: 100%;
@@ -180,8 +185,12 @@ p{
         margin-left: 43%;
     }
     .footer{
+        display: flex;
+        flex-direction: row;
         font-size: 10px;
         text-align: center;
+        justify-content: center;
+        gap: 1rem;
     }
 
 }
@@ -250,5 +259,14 @@ p{
         border: 1px;
         border-color: black;
         border-style: solid;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+@keyframes cssanimation{
+    to{
+        transform: translate(1px 1px) scale(1.1, 1.1);
     }
 }
