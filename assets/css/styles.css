@@ -56,12 +56,22 @@ p{
     text-align: center;
     justify-content: center;
     margin-bottom: 10px;
-    transition: background-color 1s linear;
-    animation: cssanimation 1412ms infinite ease;
+    
+    transform: translate(0px, 0px) scale(0, 0);
+    animation: cssAnimation 3000ms infinite ease-out;
 }
-
+@keyframes cssAnimation     {
+    from {
+      transform: translate(0px, 0px) scale(0, 0);
+    }
+  
+    to {
+      transform: translate(0px, 0px) scale(1.5, 1.5);
+    }
+  }
 .buton:hover{
     background-color: #DAD7CD;
+
 }
 .footer{
     grid-area: footer;
@@ -123,6 +133,14 @@ p{
         display: flex;
         flex-direction: column;
         gap: 3rem;
+        
+    }
+    .imagen{
+        transition: all 300ms ease-out;
+    }
+    .imagen:hover{
+        width: 90%;
+        padding-left: 10%;
     }
     .footer{
         width: 100%;
@@ -178,6 +196,12 @@ p{
     .imagen{
         width: 95%;
         height: 95%;
+        transition: all 300ms ease-out;
+    }
+    .imagen:hover{
+        width: 90%;
+        height: 90%;
+        padding-left: 10%;
     }
     .buton{
         text-align: center;
@@ -247,6 +271,13 @@ p{
     .imagen{
         width: 95%;
         height: 95%;
+        transition: all 300ms ease-out;
+    }
+    .imagen:hover{
+        width: 90%;
+        height: 90%;
+        padding-left: 10%;
+        
     }
     .buton{
         text-align: center;
